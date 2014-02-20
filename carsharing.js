@@ -16,7 +16,7 @@ var optionsEnjoy = {
   json: 'body'
 };
 
-var minutes = 5, 
+var minutes = 2, 
   the_interval = minutes * 60 * 1000;
 
 db.open(function(){
@@ -56,5 +56,5 @@ db.open(function(){
       });
     }, the_interval);  
   });
-  
+
 });
