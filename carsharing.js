@@ -1,7 +1,7 @@
 var mongo = require('mongodb');
 var request = require('request');
 
-var db = new mongo.Db('carsharing', new mongo.Server('localhost', 27017, {}), {});
+var db = new mongo.Db('carsharing', new mongo.Server('localhost', 27017), {safe:false});
 
 var optionsCar2Go = {
   url: 'https://www.car2go.com/api/v2.1/vehicles',
