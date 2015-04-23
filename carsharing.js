@@ -5,7 +5,7 @@ var db = new mongo.Db('carsharing', new mongo.Server('localhost', 27017), {safe:
 
 var optionsCar2Go = {
   url: 'https://www.car2go.com/api/v2.1/vehicles',
-  qs: {'loc':'milano', 'oauth_consumer_key':'car2gowebsite', 'format':'json'},
+  qs: {'loc':'Vienna', 'oauth_consumer_key':'car2gowebsite', 'format':'json'},
   json: 'body'
 };
 
@@ -49,7 +49,7 @@ db.open(function(){
             'date' : new Date(),
             'values' : body
           };
-
+ 
           collection.insert(data, {safe:true}, function(){});
 
         }
